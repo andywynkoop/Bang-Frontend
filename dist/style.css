@@ -1,0 +1,83 @@
+body {
+  font-family: 'Rye', cursive;
+  
+}
+#background {
+  filter: blur(4px);
+  height:100vh;
+}
+
+#background div {
+  height: 100vh;
+  background: url("https://s3.amazonaws.com/bang-aa/west+town.jpg");
+}
+
+#root {
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.app {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app h1 {
+  font-size: 100px;
+  color: #D4AF37;
+}
+
+.app h2 {
+  font-size: 32px;
+  color: rgb(92, 60, 2);
+}
+
+.app h1, .app h2, .join h2 {
+  text-shadow: 0px 0px 20px #999;
+}
+
+.app-btn {
+  border-radius: 3px;
+  font-size: 48px;
+  background-color: #8B4513;
+  color: #D4AF37;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 0px 20px #333;
+  cursor: pointer;
+  margin-top: 20px;
+  display:
+}
+
+.app-btn:hover {
+  box-shadow: 0px 0px 20px #D4AF37;
+}
+
+.app-input {
+  font-size: 24px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #D4AF37;
+  border: solid 1px #D4AF37;
+  padding:10px;
+  background: rgba(212, 175, 55, 0.5);
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.join-h2 {
+  font-size: 48px;
+  color: #FF8C00;
+}
+
+.app-input:focus {
+  outline: none;
+}
