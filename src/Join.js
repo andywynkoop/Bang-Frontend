@@ -5,10 +5,9 @@ import { loginUser } from './actions';
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      username: ''
-    }
+    this.state = { username: '' }
     this.join = this.join.bind(this);
+    this.update = this.update.bind(this);
   }
   
   join(e) {
@@ -16,9 +15,7 @@ class Login extends Component {
     this.props.login(this.state);
   }
 
-  button() {
-    return this.state.username ? <button className="app-btn">Saddle Up</button> : null
-  }
+  update(e) { this.setState({ username: e.target.value }) }
 
   render() {
     return(
@@ -26,8 +23,12 @@ class Login extends Component {
         <form onSubmit={this.join}>
           <h2>Well HOWWWDY, Partner!</h2>
           <h2>What do you call yourself?</h2>
-          <input className="app-input" type="text" value={this.state.username} onChange={(e) => this.setState({ username: e.target.value })} />
-          {this.button()}
+          <input className="app-input" type="text" value={this.state.username} onChange={this.update} />
+          {
+            this.state.username ? 
+            <button className="app-btn">Saddle Up</button> : 
+            null
+          }
         </form>
       </div>
     )

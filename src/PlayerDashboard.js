@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { logoutUser } from './actions';
-import Bullets from './dashboard/Bullets';
+import Profile from './dashboard/Profile';
 import Cards from './dashboard/Cards';
+
 
 class PlayerDashboard extends Component {
   
@@ -10,15 +11,11 @@ class PlayerDashboard extends Component {
     const { name, bullets, logout } = this.props;
     return (
       <div className="player-dashboard">
-        <div className="player">
-          <h4>{name}</h4>
-          <div>
-            <img className="avatar" src="https://s3.amazonaws.com/bang-aa/howard.jpg" />
-            <Bullets number={bullets}/>
-          </div>
-        </div>
+        <Profile name={name} bullets={bullets} />
         <Cards />
-        <button onClick={logout} className="app-btn logout" >Hit the Dusty Trail</button>
+        <button onClick={logout} className="app-btn logout" >
+          Hit the Dusty Trail
+        </button>
       </div>
     )
   }
