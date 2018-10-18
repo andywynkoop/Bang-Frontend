@@ -3,25 +3,25 @@ import { connect } from 'react-redux';
 import { logoutUser } from './actions';
 import Profile from './dashboard/Profile';
 import Cards from './dashboard/Cards';
+import DashButtons from './dashboard/DashButtons';
 
 
 class PlayerDashboard extends Component {
-  
   render() {
-    const { name, bullets, logout } = this.props;
+    const { user, logout } = this.props;
     return (
       <div className="player-dashboard">
-        <Profile name={name} bullets={bullets} />
+        <Profile user={user} />
         <Cards />
-        <button onClick={logout} className="app-btn logout" >
-          Hit the Dusty Trail
-        </button>
+        <DashButtons logout={logout} user={user} />
       </div>
     )
   }
 }
 
-const msp = ({ session: { username:name, bullets } }) => ({ name, bullets });
+const msp = ({ session, players }) => ({
+  user: players[session]
+});
 
 const mdp = dispatch => ({
   logout: () => dispatch(logoutUser())

@@ -9,7 +9,7 @@ import mancato from 'mancato';
 window.mancato = mancato;
 
 document.addEventListener("DOMContentLoaded", () => {
-  mancato.get('http://localhost:3001/session').then(({ user:session, game, players }) => {
+  mancato.get('http://localhost:3001/session').then(({ session, game, players }) => {
     const store = createStore(rootReducer, { session, game, players }, applyMiddleware(thunk));
     window.getState = store.getState;
     ReactDOM.render(

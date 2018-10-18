@@ -1,10 +1,12 @@
-import { GAME, JOIN_GAME, USER, LOGOUT } from '../actions';
+import { GAME, JOIN_GAME, USER, LOGOUT, NEW_GAME } from '../actions';
 
 export default (state = null, action) => {
-  const { type, game, payload } = action;
+  const { type, payload } = action;
   switch (type) {
+    case NEW_GAME:
+      return payload.game;
     case GAME:
-    return game;
+      return payload.game;
     case JOIN_GAME, USER:
       return payload.game;
     case LOGOUT:

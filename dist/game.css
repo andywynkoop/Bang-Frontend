@@ -1,0 +1,82 @@
+.player-index {
+  width: 250px;
+  height: 100vh;
+  background: rgb(150, 99, 4);
+  padding-bottom: 200px;
+  border-right: solid 5px #D4AF37;
+}
+
+.player-index-item {
+  display: flex;
+  padding: 10px 0px 10px 10px;
+  position: relative;
+}
+
+.player-index-item h4 {
+  font-size: 20px;
+}
+
+.player-index-item > img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.player-bullets {
+  display: flex;
+}
+
+.player-bullets img {
+  height: 18px;
+  width: 30px;
+  transform: rotate(-55deg);
+  margin-right: -8px;
+}
+
+.player-index-item .sheriff {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 35px;
+  bottom: 0px;
+}
+
+.game-screen {
+  position: absolute;
+  left: 250px;
+  top: 0px;
+  bottom: 200px;
+  right: 0px;
+  text-align: center;
+}
+
+.game-screen .start-game-btn, .game-screen .game-join-btn {
+  position: relative;
+  margin: auto;
+  bottom: -10px;
+}
+
+.game-screen .game-join-btn {
+  top: 150px;
+}
+
+.game-message-card {
+  background: url('https://s3.amazonaws.com/bang-aa/old_paper.jpg');
+  height: 400px;
+  width: 600px;
+  padding: 40px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 50px;
+  border: solid 1px rgb(150, 99, 4);
+  box-shadow: 0 0 5px rgb(150, 99, 4);
+  font-size: 34px;
+  position: relative;
+  text-align: center;
+}
+
+.start-game-text {
+  font-size: 24px;
+}

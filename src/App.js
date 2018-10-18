@@ -14,7 +14,6 @@ class App extends Component {
     this.socket.on("currentPlayers", players => getPlayers(players));
     this.socket.on("playerLeft", _id => removePlayer(_id));
   }
-
   render() {
     return(
       <div>

@@ -1,12 +1,12 @@
 import React from 'react';
 import Bullets from './Bullets';
-const defaultAvatar = "https://s3.amazonaws.com/bang-aa/howard.jpg";
+import Avatar from './Avatar.js';
 
-export default ({ name, bullets }) => 
+export default ({ user: { username, bullets, avatar } }) => 
   <div className="player">
-    <h4>{name}</h4>
+    <h4>{username}</h4>
     <div>
-      <img className="avatar" src={defaultAvatar} />
-      <Bullets number={bullets} />
+      <Avatar avatar={avatar} />
+      <Bullets number={bullets} style="bullets" />
     </div>
   </div>
